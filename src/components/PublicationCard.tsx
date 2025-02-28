@@ -1,7 +1,7 @@
 import React from 'react';
 import { ExternalLink } from 'lucide-react';
 
-interface ProjectCardProps {
+interface PublicationCardProps {
   title: string;
   description: string;
   image: string;
@@ -9,7 +9,7 @@ interface ProjectCardProps {
   link?: string;
 }
 
-const ProjectCard = ({ title, description, image, technologies, link }: ProjectCardProps) => {
+const ProjectCard = ({ title, description, image, technologies, link }: PublicationCardProps) => {
   return (
     <div className="glassmorphic overflow-hidden rounded-2xl group h-full flex flex-col transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.1)]">
       <div className="relative overflow-hidden">
@@ -55,4 +55,4 @@ const ProjectCard = ({ title, description, image, technologies, link }: ProjectC
   );
 };
 
-export default ProjectCard;
+export default PublicationCard;
