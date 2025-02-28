@@ -9,7 +9,7 @@ interface PublicationCardProps {
   link?: string;
 }
 
-const ProjectCard = ({ title, description, image, technologies, link }: PublicationCardProps) => {
+const PublicationCard = ({ title, description, image, technologies, link }: PublicationCardProps) => {
   return (
     <div className="glassmorphic overflow-hidden rounded-2xl group h-full flex flex-col transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.1)]">
       <div className="relative overflow-hidden">
