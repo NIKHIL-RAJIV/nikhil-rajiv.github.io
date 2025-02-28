@@ -1,8 +1,8 @@
 import React, { useMemo } from 'react';
-import ProjectCard from './ProjectCard';
-import projects from '../constants/project'
+import PublicationCard from './PublicationCard';
+import publications from '../constants/publication'
 
-const Projects = () => {
+const Publications = () => {
   const stars = useMemo(() => {
     return [...Array(75)].map(() => ({
       top: `${Math.random() * 100}%`,
@@ -12,7 +12,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <section id="projects" className="min-h-screen py-32 px-8 relative">
+    <section id="publications" className="min-h-screen py-32 px-8 relative">
       {/* Stars container */}
       <div className="absolute bottom-0 left-0 right-0 h-[50vh] overflow-hidden">
         {stars.map((star, i) => (
@@ -28,11 +28,11 @@ const Projects = () => {
         ))}
       </div>
 
-      {/* Projects grid */}
+      {/* Publications grid */}
       <div className="max-w-7xl mx-auto relative">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project, index) => (
-            <ProjectCard key={index} {...project} />
+          {publications.map((publication, index) => (
+            <PublicationCard key={index} {...publication} />
           ))}
         </div>
       </div>
@@ -40,4 +40,4 @@ const Projects = () => {
   );
 }
 
-export default Projects;
+export default Publications;
